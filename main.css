@@ -5,17 +5,18 @@
 body {
   font-family: Arial;
   padding: 10px;
-  background: #f1f1f1;
+  background-image: url('cat.gif');
 }
 
 .figure{
+	position: fixed;
 	float: left;
 	width: 25%;
 	height: 900px;
 }
 
 .content{
-	float: left;
+	float: right;
 	width: 75%;
 	padding-left: 20px;
 	height: auto;
@@ -54,8 +55,13 @@ body {
 }
 
 .content-row h1{
-	font-family: 'Merriweather Sans', sans-serif;
+	font-family: 'Gochi Hand', cursive;
 	font-weight: bold;
+}
+
+.content-row p{
+	font-family: 'Gochi Hand';
+	font-size: 18px;
 }
 
 .gambar{
@@ -90,8 +96,10 @@ nav ul li a{
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
-  .figure, .detail {   
+  .figure, .detail {
+  	position: relative;  
     width: 100%;
+    height: auto;
     padding: 0;
   }
   .content{
